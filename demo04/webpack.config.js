@@ -12,6 +12,25 @@ module.exports = {
         // publicPath: './', //服务器端文件输出绝对路径  指定资源文件引用的目录
         path: resolve(__dirname, 'dist') //本地文件输出位置路径
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                common: {
+                    chunks: "initial",
+                    name: "common",
+                    minChunks: 1, //最少引用
+                    maxInitialRequests: 5, //最大请求
+                    minSize: 0 //限制大小
+                },
+                vendor: {
+                    chunks: 'initial',
+                    name: 'vendor',
+                    test: 'vendor',
+                    enforce: true
+                }
+            }
+        }
+    },
     module: {
         rules: [{
             test: /\.(png|gif|svg|jpg)$/i,
