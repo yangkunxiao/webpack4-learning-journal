@@ -9,8 +9,12 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js', //输出文件名称
-        // publicPath: './', //服务器端文件输出绝对路径  指定资源文件引用的目录
+        publicPath: '/', //服务器端文件输出绝对路径  指定资源文件引用的目录
         path: resolve(__dirname, 'dist') //本地文件输出位置路径
+    },
+    devServer: {
+        open: true,
+        contentBase: './dist'
     },
     optimization: {
         splitChunks: {
@@ -50,8 +54,8 @@ module.exports = {
                         //placeholder 占位符
                         limit: 8192,
                         name: '[name].[ext]',
-                        outputPath: 'images/'
-                            // publicPath: 'assets/'
+                        outputPath: 'images/',
+                        // publicPath: 'assets/'
                     }
                 }
             ]
