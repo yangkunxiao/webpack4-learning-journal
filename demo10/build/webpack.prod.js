@@ -1,4 +1,4 @@
-const commen = require('./webpack.commen.js');
+const commen = require('./webpack.common.js');
 const merge = require('webpack-merge');
 const config = {
     mode:'production',
