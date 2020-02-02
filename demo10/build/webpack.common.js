@@ -6,11 +6,13 @@ module.exports = {
     context: path.resolve(__dirname, '../src'),
     entry: './index.js',
     output: {
-        filename: '[name].js',
+        publicPath: './',
         path: path.resolve(__dirname, '../dist'),
-        publicPath: './'
     },
     optimization: {
+        runtimeChunk:{
+            name:'manifest'
+        },
         splitChunks: {
             chunks: "all",//进行代码分割的时候，all：针对所有的导入  async:只针对异步导入 initial:针对同步代码导入。
             minSize: 300000,//设置最小阀值，只有大于该阀值，才会进行代码分割。
@@ -23,7 +25,7 @@ module.exports = {
                 vendors: {//配置同步导入 
                     test: /[\\/]node_modules[\\/]/,//只有node_module中的才会进入
                     priority: -10,//值越大 优先级越高
-                    // filename: 'vendors.js'
+                    name: 'vendors'
                 },
                 // default: {
                 //     // minChunks: 2,

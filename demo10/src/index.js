@@ -1,14 +1,20 @@
-// import { add } from './math';
+import { add } from './math';
 
-// let sum = add(1,4);
-// console.log(sum)
+if('serviceWorker' in navigator){
+    window.addEventListener('load',() => {
+        navigator.serviceWorker.register('/service-worker.js')
+    })
+}
+
+let sum = add(1,4);
+console.log(sum)
 
 
 //异步导入
  function getComponent(){
     return import(/* webpackChunkName:"lodash" */ "lodash").then(({ default:_ }) => {
         let div = document.createElement('div');
-        div.innerHTML = _.join(['hello','world','lodash']);
+        div.innerHTML = _.join(['hello','world','lodash'],'~');
         return div;
     })
     // const _ = await import(/* webpackChunkName:"lodash" */ "lodash");
