@@ -9,6 +9,10 @@ module.exports = {
         publicPath: './',
         path: path.resolve(__dirname, '../dist'),
     },
+    resolve:{
+        extensions:['.js','.jsx'],
+        mainFiles:['index']
+    },
     optimization: {
         runtimeChunk:{
             name:'manifest'
