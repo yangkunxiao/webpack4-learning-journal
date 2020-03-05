@@ -14,7 +14,6 @@ const makeHtml = (configs) => {
     let pluginsDll = [
         new CleanWebpackPlugin(),
     ];
-
     Object.keys(configs.entry).forEach(key => {
         console.log(key)
         pluginsDll.push(
