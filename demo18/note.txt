@@ -1,0 +1,18 @@
+1、@babel/parser 生成ast 抽象语法树
+    const content = fs.readFileSync(filename,'utf-8');
+    const ast = parser.parse(content,{
+        sourceType:'module'
+    });
+2、@babel/traverse 解析依赖
+    traverse(ast,{
+        ImportDeclaration({ node }){
+            const pathDir = path.dirname(filename);
+            const pathResolveDir = './' + path.join(pathDir,node.source.value);
+            dependencesArray[node.source.value] = pathResolveDir
+        }
+    })
+3、@babel/core transformFromAst() 转译ast成一个对象
+     babel.transformFromAst(ast, null, {presets:['@babel/preset-env']}, function(err, result) {
+        const { code, map, ast } = result;
+        console.log(code,map, ast)
+      });

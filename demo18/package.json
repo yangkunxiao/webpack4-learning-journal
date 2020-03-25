@@ -1,0 +1,28 @@
+{
+	"name": "demo18",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"debug": "node --inspect --inspect-brk  node_modules/webpack/bin/webpack.js",
+		"dev": "webpack --mode development"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"babel-loader": "^8.1.0",
+		"happypack": "^5.0.1",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11"
+	},
+	"dependencies": {
+		"@babel/parser": "^7.9.4",
+		"@babel/traverse": "^7.9.0",
+		"acorn": "^7.1.1",
+		"acorn-walk": "^7.1.1",
+		"tapable": "^1.1.3"
+	}
+}

@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add uglify-js
+
+PATH: 
+  /Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Users/yangkunxiao/.nvm/versions/node/v12.12.0/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin:/usr/local/bin/node/bin:/Users/yangkunxiao/Library/Android/sdk/platform-tools:/Users/yangkunxiao/Library/Android/sdk/tools:/usr/local/mysql/bin:/usr/local/bin/node/bin:/Users/yangkunxiao/Library/Android/sdk/platform-tools:/Users/yangkunxiao/Library/Android/sdk/tools:/usr/local/mysql/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  12.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/yangkunxiao/Library/Caches/Yarn/v4/npm-inherits-2.0.1-b17d08d326b4423e568eff719f91b0b1cbdf69f1/node_modules/inherits/LICENSE' -> '/Users/yangkunxiao/Desktop/Github/webpack4-learning-journal/demo18/node_modules/assert/node_modules/inherits/LICENSE'
+
+npm manifest: 
+  {
+    "name": "demo18",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "webpack --mode development"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@babel/preset-env": "^7.9.0",
+      "babel-loader": "^8.1.0",
+      "webpack": "^4.42.1",
+      "webpack-cli": "^3.3.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
