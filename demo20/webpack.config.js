@@ -1,7 +1,10 @@
 const WebpackDeepScoprPlugin = require('webpack-deep-scope-plugin').default
 
 module.exports = {
-    plugins:[
-        new WebpackDeepScoprPlugin()
-    ]
+    optimization:{
+        // chunkIds:'natural'
+    }
+    // plugins:[
+    //     new WebpackDeepScoprPlugin()
+    // ]
 }

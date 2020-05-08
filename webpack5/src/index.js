@@ -1,9 +1,11 @@
 // import result from './sync';
-import('./sync').then(res => {
+import('./async').then(res => {
     console.log(res)
 })
-// import('./async').then(res => {
+// import('./sync').then(res => {
 //     console.log(res)
 // })
+
+// const result = 'kaka'
 console.log('我是kaka')
-// console.log(result)
+console.log(result)

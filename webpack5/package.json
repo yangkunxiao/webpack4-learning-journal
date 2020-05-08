@@ -1,0 +1,14 @@
+{
+  "name": "demo21",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "dependencies": {
+    "webpack": "^5.0.0-beta.16",
+    "webpack-cli": "^4.0.0-beta.8"
+  }
+}
